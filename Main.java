@@ -11,9 +11,8 @@ public class Main {
                 0. Quit
                 """);
 
-            //test bara
-            MathQuiz mathQuiz = new MathQuiz();
-            mathQuiz.gameStart();
-
+        //För att starta Quizzet: (TO DO: lägg till menyval till huvudmenyn)
+        MathQuiz mathQuiz = new MathQuiz();
+        mathQuiz.gameStart();
     }
 }
