@@ -1,4 +1,0 @@
-//Alrik
-public class Lose {
-
-}
