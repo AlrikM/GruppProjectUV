@@ -11,6 +11,9 @@ public class Main {
                 0. Quit
                 """);
 
+            //test bara
+            MathQuiz mathQuiz = new MathQuiz();
+            mathQuiz.gameStart();
 
     }
 }

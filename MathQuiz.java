@@ -2,29 +2,30 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MathQuiz {
-    Random rand = new Random();
-    Scanner scanner = new Scanner(System.in);
+    public void gameStart() {
+        Random rand = new Random();
+        Scanner scanner = new Scanner(System.in);
+        int quizScore = 0;
 
-    int correctAnswer;
-    int userAttempt;
-    int quizScore = 0;
+        int correctAnswer;
+        int userAttempt;
 
+        for (int i = 0; i < 5; i++) {
 
-    for (int i = 1; i < 5; i++ ){
+            int n1 = rand.nextInt(50);
+            int n2 = rand.nextInt(50);
+            correctAnswer = n1 + n2;
 
-        int n1 = rand.nextInt(50);
-        int n2 = rand.nextInt(50);
-        correctAnswer = n1 + n2;
+            System.out.println("What is " + n1 + " + " + n2 + "?: ");
+            userAttempt = scanner.nextInt();
 
-        System.out.println("What is " + n1 + " + " + n2 + "?: ");
-        userAttempt = scanner.nextInt();
-
-        if (userAttempt == correctAnswer) {
-            System.out.println("Correct!");
-            quizScore = quizScore + 1;
+            if (userAttempt == correctAnswer) {
+                System.out.println("Correct!");
+                quizScore ++;
+            } else {
+                System.out.println("Wrong! ... Correct answer is: " + correctAnswer);
+            }
         }
-        else {
-            System.out.println("Wrong!");
-        }
+        System.out.println("You got " + quizScore + " points!");
     }
 }
