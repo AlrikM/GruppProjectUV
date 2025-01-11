@@ -13,9 +13,8 @@ public class MathQuiz {
         return quizScore;
     }
 
-    public void gameStart() {
+    public void gameStart(Scanner scanner) {
         Random rand = new Random();
-        Scanner scanner = new Scanner(System.in);
 
         int correctAnswer;
         int userAttempt;

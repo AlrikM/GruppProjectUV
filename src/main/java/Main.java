@@ -18,10 +18,10 @@ public class Main {
                 switch (choice) {
                     case 1:
                         MathQuiz mathQuiz = new MathQuiz();
-                        int score = mathQuiz.gameStart(scan);
+                        mathQuiz.gameStart(scan);
                         System.out.println("What's your name?");
                         user.setName(scan.next());
-                        user.setScore(score);
+                        user.setScore(mathQuiz.getQuizScore());
                         highscore.addScore(user.getName(), user.getScore());
                         continue;
                     case 2:
