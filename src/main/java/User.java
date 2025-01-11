@@ -7,11 +7,15 @@ public class User {
         this.name = null;
     }
 
-    public int correct() {
-        return score++;
+    public int setScore(int score) {
+        return this.score = score;
     }
+
+    public  int getScore() { return score;}
 
     public String setName(String name) {
         return this.name = name;
     }
+
+    public String getName() { return name;}
 }

@@ -2,11 +2,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MathQuiz {
-    public void gameStart() {
+    public int gameStart(Scanner scanner) {
         Random rand = new Random();
-        Scanner scanner = new Scanner(System.in);
         int quizScore = 0;
-
         int correctAnswer;
         int userAttempt;
 
@@ -27,7 +25,6 @@ public class MathQuiz {
             }
         }
         System.out.println("You got " + quizScore + " points!");
-        scanner.close();
-        
+        return quizScore;
     }
 }
