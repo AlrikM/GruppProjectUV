@@ -2,9 +2,21 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MathQuiz {
-    public int gameStart(Scanner scanner) {
+
+    private int quizScore;
+
+    public MathQuiz() {
+        this.quizScore = 0;
+    }
+
+    public int getQuizScore() {
+        return quizScore;
+    }
+
+    public void gameStart() {
         Random rand = new Random();
-        int quizScore = 0;
+        Scanner scanner = new Scanner(System.in);
+
         int correctAnswer;
         int userAttempt;
 
@@ -19,12 +31,12 @@ public class MathQuiz {
 
             if (userAttempt == correctAnswer) {
                 System.out.println("Correct!");
-                quizScore ++;
+                quizScore++;
             } else {
                 System.out.println("Wrong! ... Correct answer is: " + correctAnswer);
             }
         }
         System.out.println("You got " + quizScore + " points!");
-        return quizScore;
+        scanner.close();
     }
 }
