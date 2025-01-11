@@ -36,6 +36,6 @@ public class MathQuiz {
             }
         }
         System.out.println("You got " + quizScore + " points!");
-        scanner.close();
+        // scanner.close();
     }
 }
