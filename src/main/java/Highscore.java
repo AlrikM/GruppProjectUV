@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Highscore {
-    private TreeMap<Integer, String> scores;
+    public TreeMap<Integer, String> scores;
 
     public Highscore() {
         scores = new TreeMap<>((Collections.reverseOrder()));
