@@ -1,11 +1,19 @@
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * initiates obj and opens start menu
+     * user choses option 1-3
+     * 1. initiates math quiz and sets user score and name into highscore before-
+     * sent back to menu loop
+     * 2. show Highscore top 5 games
+     * 3. finishes loop and finishes running program
+     */
     public static void main(String[] args) {
-        Highscore highscore = new Highscore();
-        Scanner scan = new Scanner(System.in);
-        User user = new User();
-            while (true) {
+        Highscore highscore = new Highscore(); // creates Highscore obj
+        Scanner scan = new Scanner(System.in); // create Scanner obj
+        User user = new User(); // create User obj
+        while (true) {
                 int quit = 0;
                 System.out.println("""
                         Hello there!
