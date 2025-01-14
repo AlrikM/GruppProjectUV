@@ -11,4 +11,20 @@ class MathQuizTest {
         assertEquals(0, mathQuiz.getQuizScore());
 
     }
+
+    @Test
+    void testGameStart() {
+        MathQuiz mathQuiz = new MathQuiz();
+        assertNotEquals(-1, mathQuiz.getQuizScore());
+
+        int minValue = 0;
+        int maxValue = 100;
+
+        assertTrue(mathQuiz.getQuizScore() >= minValue);
+        assertTrue(mathQuiz.getQuizScore() <= maxValue);
+
+        assertFalse(mathQuiz.getQuizScore() < minValue);
+        assertFalse(mathQuiz.getQuizScore() > maxValue);
+    }
 }
+
